@@ -10,15 +10,15 @@ app.get('/', function (req, res) {
 });
 
 app.get('/Chapter-1', function (req, res) {
-  res.send('Chapter 1 requested and will be served here!');
+  res.sendFile('Chapter 1 requested and will be served here!');
 });
 
 app.get('/Chapter-2', function (req, res) {
-  res.send('Chapter 2 requested and will be served here!');
+  res.sendFile('Chapter 2 requested and will be served here!');
 });
 
 app.get('/Chapter-3', function (req, res) {
-  res.send('Chapter 3 requested and will be served here!');
+  res.sendFile('Chapter 3 requested and will be served here!');
 });
 
 
