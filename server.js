@@ -22,10 +22,9 @@ var articleOne = {
   <title>Number1</title>
  </head>
  <body>
-    <h3>Chapter One</h3>
+   
   This is number 1
-  <div>
-      October 6, 2016
+  
   </div>
  </body>
 </html>
