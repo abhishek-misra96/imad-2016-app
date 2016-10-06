@@ -34,7 +34,7 @@ var articles = {
 },
  'article-two' : {
          title: 'Chapter Two | Arsim',
-    heading: 'Chapter one',
+    heading: 'Chapter two',
     date: 'October 6,2016',
     content: `
     <!doctype html>
@@ -59,7 +59,7 @@ var articles = {
  },
 'article-three':{
         title: 'Chapter Three | Arsim',
-    heading: 'Chapter one',
+    heading: 'Chapter three',
     date: 'October 6,2016',
     content: `
     <!doctype html>
