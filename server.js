@@ -5,12 +5,67 @@ var path = require('path');
 var app = express();
 app.use(morgan('combined'));
 
+
+var articleOne = {
+    title: 'Chapter One | Arsim',
+    heading: 'Chapter one',
+    date: 'October 6,2016',
+    content: `
+    <!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>Number1</title>
+ </head>
+ <body>
+    <h3>Chapter One</h3>
+  This is number 1
+  <div>
+      October 6, 2016
+  </div>
+ </body>
+</html>
+    
+    `
+};
+ 
+ 
+ function createTemplate(data){ 
+       var date  = data.date;
+         var heading = data.heading;
+           var content = data.content;
+     
+var htmlTemplate =`
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>${title}</title>
+ </head>
+ <h3>${heading}</h3>
+ ${content}
+  <div>
+     ${date}
+  </div> 
+ </body>
+</html>`;
+   return htmlTemplate;  
+ }
+
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
 
 app.get('/Chapter-1', function (req, res) {
-  res.sendFile(path.join(__dirname, 'ui', 'Chapter-1.html'));
+  res.send (createTemplate(articleOne));
 });
 
 app.get('/Chapter-2', function (req, res) {
