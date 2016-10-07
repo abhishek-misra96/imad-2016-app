@@ -5,9 +5,7 @@
         <title>Homepage</title>
         <script>
     function cname(){
-        var usname;
-        usname = document.getElementById("uname").value;
-        window.alert("Welcome " + usname);
+        window.alert("Welcome ");
     }
         </script>
     </head>
@@ -20,7 +18,7 @@
         <br><br>
    
         <div>
-            Enter Your Name <input type="textbox" placeholder="Enter Name" class="uname" oninput="cname()">
+            Enter Your Name <input type="textbox" placeholder="Enter Name" class="uname" onload="cname()">
       
         </div>
        
