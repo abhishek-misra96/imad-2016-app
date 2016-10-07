@@ -2,14 +2,24 @@
 <html>
     <head>
         <link href="/ui/style.css" rel="stylesheet" />
+        <title>Homepage</title>
+        <script>
+    function cname(){
+        var usname;
+        usname = document.getElementById("uname").value;
+        window.alert("Welcome " + usname);
+    }
+        </script>
     </head>
     <body>
         
         <br>
         <div class="center text-big bold">
            Arsim is the KING!
-		 As now i have successfully tested, commit in github and i am happy
-		 now
+        </div>
+        <br><br>
+        <div>
+            Enter Your Name <input type="textbox" placeholder="Enter Name" class="uname" onchange="cname">
         </div>
         <script type="text/javascript" src="/ui/main.js">
         </script>
