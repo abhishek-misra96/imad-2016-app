@@ -1,5 +1,5 @@
 //making counter work
-/*var button = document.getElementById("counter");
+var button = document.getElementById("counter");
 
 button.onclick = function (){
     // create a request
@@ -24,7 +24,7 @@ button.onclick = function (){
    request.open('GET', 'http://abhishek-misra96.imad.hasura-app.io/counter', true);
 request.send(null);
 };
-*/
+
 
 //submit name
 
