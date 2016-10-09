@@ -35,12 +35,14 @@ submit.onclick = function(){
     
     //capture response and store in variable
     request.onreadystatechange = function(){
-       if(request.readystate == XMLHttpRequest.DONE){
+       if(request.readystate === XMLHttpRequest.DONE){
            // take some action
       
         //not done yet
-        if(request.status == 200){
-            var names = ['name1','name2','name3'];
+        if(request.status === 200){
+            var names = request.responseText;
+            names = JSON.parse(names);
+       
     var list = '';
     for(var i=0; i<names.length; i++){
         list += '<li>' + names[i] + '</li>';
