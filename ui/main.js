@@ -50,15 +50,15 @@ submit.onclick = function(){
     }
     var ul = document.getElementById("nameslist");
     ul.innerHTML = list;
-        var nameInput = document.getElementById("name");
-var name = nameInput.value;
+
         }
        }
     };
     
 
     //make a request
-
+        var nameInput = document.getElementById("name");
+var name = nameInput.value;
    request.open('GET', 'http://abhishek-misra96.imad.hasura-app.io/submit-name?name=' + name, true);
 request.send(null);
     };
