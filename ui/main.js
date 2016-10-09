@@ -23,8 +23,24 @@ button.onclick = function (){
     //make a request
    request.open('GET', 'http://abhishek-misra96.imad.hasura-app.io/counter', true);
 request.send(null);
-
-   
-    
-    
 };
+
+
+//submit name
+var nameInput = document.getElementById("name");
+var name = nameInput.value;
+var submit =  document.getElementById("submit_btn");
+submit.onclick = function(){
+    //make th request and send the name
+    
+    
+    //capture a list of name and render it
+    var names = ['name1','name2','name3'];
+    var list = '';
+    for(var i=0; i<names.length; i++){
+        list += '<li>' + names[i] + '</li>';
+        
+    }
+    var ul = document.getElementById("nameslist");
+};
+
