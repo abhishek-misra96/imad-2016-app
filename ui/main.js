@@ -1,1 +1,18 @@
-console.log('Loaded!');
+//making counter work
+var button = document.getElementById("counter");
+var counter = 0;
+button.onclick = function (){
+    // make a request
+    
+    
+    //capture response and store in variable
+    
+    
+    
+    //render response in correct span
+    counter = counter+ 1;
+    var span = document.getElementById("count");
+    span.innerHTML = counter.toString();
+    
+    
+};
