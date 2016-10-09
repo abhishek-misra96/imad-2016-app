@@ -107,10 +107,11 @@ var htmlTemplate =`
   <title>${title}</title>
  </head>
  <h3>${heading}</h3>
- ${content}
-  <div>
+   <div>
      ${date}
   </div> 
+ <div>${content}</div>
+
  </body>
 </html>`;
    return htmlTemplate;  
