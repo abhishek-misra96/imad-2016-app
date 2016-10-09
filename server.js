@@ -90,9 +90,9 @@ var articles = {
 
      var title = data.title;
 var heading = data.heading;
-     
+             var date = data.date;
            var content = data.content;
-               var date = data.date;
+       
               
      
 var htmlTemplate =`
