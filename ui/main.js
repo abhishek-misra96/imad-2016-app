@@ -1,5 +1,5 @@
 //making counter work
-var button = document.getElementById("counter");
+/*var button = document.getElementById("counter");
 
 button.onclick = function (){
     // create a request
@@ -7,11 +7,11 @@ button.onclick = function (){
     
     //capture response and store in variable
     request.onreadystatechange = function(){
-       if(request.readystate == XMLHttpRequest.DONE){
+       if(request.readyState === XMLHttpRequest.DONE){
            // take some action
       
         //not done yet
-        if(request.status == 200){
+        if(request.status === 200){
             var counter = request.responseText;
              var span = document.getElementById('count');
     span.innerHTML = counter.toString();
@@ -24,7 +24,7 @@ button.onclick = function (){
    request.open('GET', 'http://abhishek-misra96.imad.hasura-app.io/counter', true);
 request.send(null);
 };
-
+*/
 
 //submit name
 
@@ -35,7 +35,7 @@ submit.onclick = function(){
     
     //capture response and store in variable
     request.onreadystatechange = function(){
-       if(request.readystate === XMLHttpRequest.DONE){
+       if(request.readyState === XMLHttpRequest.DONE){
            // take some action
       
         //not done yet
@@ -44,22 +44,22 @@ submit.onclick = function(){
             names = JSON.parse(names);
        
     var list = '';
-    for(var i=0; i<names.length; i++){
+    for (var i=0; i<names.length; i++){
         list += '<li>' + names[i] + '</li>';
         
     }
     var ul = document.getElementById("nameslist");
     ul.innerHTML = list;
-    
+        var nameInput = document.getElementById("name");
+var name = nameInput.value;
         }
        }
     };
     
 
     //make a request
-    var nameInput = document.getElementById("name");
-var name = nameInput.value;
-   request.open('GET', 'http://abhishek-misra96.imad.hasura-app.io/submit-name?name=' + name, true);
 
+   request.open('GET', 'http://abhishek-misra96.imad.hasura-app.io/submit-name?name=' + name, true);
+request.send(null);
     };
 
