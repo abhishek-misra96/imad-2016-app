@@ -86,7 +86,7 @@ var articles = {
 }
 };
  
- function createTemplate(data){ 
+ /*function createTemplate(data){ 
 
      var title = data.title;
 var heading = data.heading;
@@ -115,16 +115,16 @@ var htmlTemplate =`
  </body>
 </html>`;
    return htmlTemplate;  
- }
+ }*/
 
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
 
-app.get('/:articleName', function (req, res) {
+/*app.get('/:articleName', function (req, res) {
     var articleName = req.params.articleName; 
   res.send(createTemplate(articles[articleName]));
-});
+});*/
 
 
 
