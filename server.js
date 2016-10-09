@@ -127,6 +127,16 @@ app.get('/', function (req, res) {
 });*/
 
 
+var names = [];
+app.get('/submit-name', function (req, res) {
+ //get the name from the request
+ var name = req.query.name;
+ 
+ 
+ names.push(name);
+ //JSON Java Script Object Notation 
+ res.send(JSON.stringify(names));//todo
+});
 
 
 app.get('/ui/style.css', function (req, res) {
@@ -154,16 +164,6 @@ app.get('/ui/lol.jpg', function (req, res) {
 });
 
 
-var names = [];
-app.get('/submit-name', function (req, res) {
- //get the name from the request
- var name = req.query.name;
- 
- 
- names.push(name);
- //JSON Java Script Object Notation 
- res.send(JSON.stringify(names));//todo
-});
 
 
 
