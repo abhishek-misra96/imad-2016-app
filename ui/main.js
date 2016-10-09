@@ -64,12 +64,5 @@ request.send(null);
     };
 
 
-var post =  document.getElementById("postc");
-post.onclick = function(){
-    var request = new XMLHttpRequest();
-    request.onreadystatechange = function(){
-        if(request.readyState ===)
-    }
-}
 
  
