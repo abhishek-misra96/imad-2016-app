@@ -27,15 +27,20 @@ request.send(null);
 
 
 //submit name
-var nameInput = document.getElementById("name");
-var name = nameInput.value;
+
 var submit =  document.getElementById("submit_btn");
 submit.onclick = function(){
     //make th request and send the name
+      var request = new XMLHttpRequest();
     
-    
-    //capture a list of name and render it
-    var names = ['name1','name2','name3'];
+    //capture response and store in variable
+    request.onreadystatechange = function(){
+       if(request.readystate == XMLHttpRequest.DONE){
+           // take some action
+      
+        //not done yet
+        if(request.status == 200){
+            var names = ['name1','name2','name3'];
     var list = '';
     for(var i=0; i<names.length; i++){
         list += '<li>' + names[i] + '</li>';
@@ -43,5 +48,19 @@ submit.onclick = function(){
     }
     var ul = document.getElementById("nameslist");
     ul.innerHTML = list;
+    
+        }
+       }
+    };
+    
+
+    //make a request
+    var nameInput = document.getElementById("name");
+var name = nameInput.value;
+   request.open('GET', 'http://abhishek-misra96.imad.hasura-app.io/submit-name?name='+ name, true);
+request.send(null);
+    
+    //capture a list of name and render it
+   
 };
 
