@@ -1,18 +1,29 @@
 //making counter work
 var button = document.getElementById("counter");
-var counter = 0;
+
 button.onclick = function (){
-    // make a request
-    
+    // create a request
+    var request = new XMLHttpRequest();
     
     //capture response and store in variable
-    
-    
-    
-    //render response in correct span
-    counter = counter+ 1;
-    var span = document.getElementById("count");
+    request.onreadystatechange = function(){
+       if(request.readystate == XMLHttpRequest.DONE){
+           // take some action
+       }
+        //not done yet
+        if(request.status == 200){
+            var counter = request.responsText;
+             var span = document.getElementById("count");
     span.innerHTML = counter.toString();
+        }
+    };
+    
+    
+    //make a request
+    httpRequest.open('GET', 'http://abhishek-misra96.imad.hasura-app.io/counter', true);
+httpRequest.send(null);
+
+   
     
     
 };
