@@ -42,5 +42,6 @@ submit.onclick = function(){
         
     }
     var ul = document.getElementById("nameslist");
+    ul.innerHTML = list;
 };
 
