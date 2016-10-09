@@ -87,12 +87,12 @@ var articles = {
 };
  
  function createTemplate(data){ 
-     var date;
-     date = data.date;
-    
+
+     var title = data.title;
+     var date = data.date;
          var heading = data.heading;
            var content = data.content;
-               var title = data.title;
+              
      
 var htmlTemplate =`
 <!doctype html>
@@ -121,7 +121,7 @@ app.get('/', function (req, res) {
 
 app.get('/:articleName', function (req, res) {
     var articleName = req.params.articleName; 
-  res.send (createTemplate(data)(articles[articleName]));
+  res.send(createTemplate(articles[articleName]));
 });
 
 
