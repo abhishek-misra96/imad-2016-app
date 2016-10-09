@@ -20,8 +20,8 @@ button.onclick = function (){
     
     
     //make a request
-    httpRequest.open('GET', 'http://abhishek-misra96.imad.hasura-app.io/counter', true);
-httpRequest.send(null);
+   request.open('GET', 'http://abhishek-misra96.imad.hasura-app.io/counter', true);
+request.send(null);
 
    
     
