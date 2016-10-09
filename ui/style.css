@@ -1,6 +1,8 @@
 
 .center {
     text-align: center;
-    margin : 120px;
+    margin-left : 120px;
+        margin-right : 120px;
+            margin-bottom : 50px;
 }
 
